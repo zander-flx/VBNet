@@ -1,0 +1,11 @@
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\bin\Debug\arithmetic operation.exe.config
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic operation.vbprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic_operation.arithmetic_operation.resources
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic_operation.Resources.resources
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic operation.vbproj.GenerateResource.Cache
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic operation.xml
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\bin\Debug\arithmetic operation.exe
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\bin\Debug\arithmetic operation.pdb
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\bin\Debug\arithmetic operation.xml
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic operation.exe
+C:\Users\USER\Desktop\GitHub\VBNet\arithmetic operation\arithmetic operation\obj\Debug\arithmetic operation.pdb
