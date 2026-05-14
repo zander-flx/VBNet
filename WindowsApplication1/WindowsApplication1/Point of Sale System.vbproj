@@ -92,7 +92,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data1\DBConnectionFactory.vb" />
+    <Compile Include="Data\DBConnectionFactory.vb" />
     <Compile Include="Forms\UserManagementForm.Designer.vb">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
     </Compile>
@@ -146,6 +146,9 @@
     <Compile Include="Repositories\ProductRepository.vb" />
     <Compile Include="Repositories\SaleRepository.vb" />
     <Compile Include="Repositories\UserRepository.vb" />
+    <Compile Include="Services\AuthService.vb" />
+    <Compile Include="Services\PasswordHasher.vb" />
+    <Compile Include="Services\Session.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AdminDashboardForm.resx">
@@ -184,7 +187,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
-    <Folder Include="Services\" />
+    <Folder Include="Screenshots\" />
     <Folder Include="System\" />
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,7 @@ Partial Class LoginForm
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.LoginButton = New System.Windows.Forms.Button()
+        Me.MessageLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -86,11 +87,22 @@ Partial Class LoginForm
         Me.LoginButton.Text = "Login"
         Me.LoginButton.UseVisualStyleBackColor = True
         '
+        'MessageLabel
+        '
+        Me.MessageLabel.AutoSize = True
+        Me.MessageLabel.Font = New System.Drawing.Font("JetBrains Mono NL", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MessageLabel.Location = New System.Drawing.Point(12, 240)
+        Me.MessageLabel.Name = "MessageLabel"
+        Me.MessageLabel.Size = New System.Drawing.Size(259, 13)
+        Me.MessageLabel.TabIndex = 6
+        Me.MessageLabel.Text = "Invalid username or password appears here." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.MessageLabel)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.PasswordTextBox)
         Me.Controls.Add(Me.UsernameTextBox)
@@ -110,4 +122,5 @@ Partial Class LoginForm
     Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents LoginButton As Button
+    Friend WithEvents MessageLabel As Label
 End Class

@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports Point_of_Sale_System.Data1
+Imports Point_of_Sale_System.Data
 Imports Point_of_Sale_System.Models
 
 
