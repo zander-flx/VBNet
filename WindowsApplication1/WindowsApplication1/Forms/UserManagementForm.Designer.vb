@@ -22,99 +22,99 @@ Partial Class UserManagementForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.UserDetailsGroupBox = New System.Windows.Forms.GroupBox()
+        Me.NoteLabel = New System.Windows.Forms.Label()
         Me.RoleComboBox = New System.Windows.Forms.ComboBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.FullNameLabel = New System.Windows.Forms.Label()
         Me.DeactivateButon = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.SaveButton = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.NewButton = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RoleLabel = New System.Windows.Forms.Label()
         Me.ActiveCheckBox = New System.Windows.Forms.CheckBox()
         Me.FullNameTextBox = New System.Windows.Forms.TextBox()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.UsersGrid = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1.SuspendLayout()
+        Me.UserDetailsGroupBox.SuspendLayout()
         CType(Me.UsersGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'UserDetailsGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.RoleComboBox)
-        Me.GroupBox1.Controls.Add(Me.PasswordTextBox)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.DeactivateButon)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.SaveButton)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.NewButton)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.ActiveCheckBox)
-        Me.GroupBox1.Controls.Add(Me.FullNameTextBox)
-        Me.GroupBox1.Controls.Add(Me.UsernameTextBox)
-        Me.GroupBox1.Location = New System.Drawing.Point(309, 14)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(325, 365)
-        Me.GroupBox1.TabIndex = 19
-        Me.GroupBox1.TabStop = False
+        Me.UserDetailsGroupBox.Controls.Add(Me.NoteLabel)
+        Me.UserDetailsGroupBox.Controls.Add(Me.RoleComboBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.PasswordTextBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.Label2)
+        Me.UserDetailsGroupBox.Controls.Add(Me.FullNameLabel)
+        Me.UserDetailsGroupBox.Controls.Add(Me.DeactivateButon)
+        Me.UserDetailsGroupBox.Controls.Add(Me.UsernameLabel)
+        Me.UserDetailsGroupBox.Controls.Add(Me.SaveButton)
+        Me.UserDetailsGroupBox.Controls.Add(Me.PasswordLabel)
+        Me.UserDetailsGroupBox.Controls.Add(Me.NewButton)
+        Me.UserDetailsGroupBox.Controls.Add(Me.RoleLabel)
+        Me.UserDetailsGroupBox.Controls.Add(Me.ActiveCheckBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.FullNameTextBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.UsernameTextBox)
+        Me.UserDetailsGroupBox.Location = New System.Drawing.Point(309, 14)
+        Me.UserDetailsGroupBox.Name = "UserDetailsGroupBox"
+        Me.UserDetailsGroupBox.Size = New System.Drawing.Size(325, 365)
+        Me.UserDetailsGroupBox.TabIndex = 19
+        Me.UserDetailsGroupBox.TabStop = False
         '
-        'Label1
+        'NoteLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(14, 310)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(301, 28)
-        Me.Label1.TabIndex = 19
-        Me.Label1.Text = "Leave password blank when editing to keep " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "it unchanged." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.NoteLabel.AutoSize = True
+        Me.NoteLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NoteLabel.Location = New System.Drawing.Point(14, 310)
+        Me.NoteLabel.Name = "NoteLabel"
+        Me.NoteLabel.Size = New System.Drawing.Size(219, 26)
+        Me.NoteLabel.TabIndex = 19
+        Me.NoteLabel.Text = "Leave password blank when editing to keep " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "it unchanged." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'RoleComboBox
         '
-        Me.RoleComboBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RoleComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RoleComboBox.FormattingEnabled = True
         Me.RoleComboBox.Items.AddRange(New Object() {"Admin", "Cashier"})
         Me.RoleComboBox.Location = New System.Drawing.Point(90, 166)
         Me.RoleComboBox.Name = "RoleComboBox"
-        Me.RoleComboBox.Size = New System.Drawing.Size(229, 22)
+        Me.RoleComboBox.Size = New System.Drawing.Size(229, 21)
         Me.RoleComboBox.TabIndex = 18
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasswordTextBox.Location = New System.Drawing.Point(90, 126)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(229, 22)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(229, 20)
         Me.PasswordTextBox.TabIndex = 17
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 16)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 14)
+        Me.Label2.Size = New System.Drawing.Size(64, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "User Details"
         '
-        'Label3
+        'FullNameLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 49)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 14)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Full Name:"
+        Me.FullNameLabel.AutoSize = True
+        Me.FullNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FullNameLabel.Location = New System.Drawing.Point(7, 49)
+        Me.FullNameLabel.Name = "FullNameLabel"
+        Me.FullNameLabel.Size = New System.Drawing.Size(57, 13)
+        Me.FullNameLabel.TabIndex = 5
+        Me.FullNameLabel.Text = "Full Name:"
         '
         'DeactivateButon
         '
-        Me.DeactivateButon.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeactivateButon.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DeactivateButon.Location = New System.Drawing.Point(217, 240)
         Me.DeactivateButon.Name = "DeactivateButon"
         Me.DeactivateButon.Size = New System.Drawing.Size(88, 23)
@@ -122,19 +122,19 @@ Partial Class UserManagementForm
         Me.DeactivateButon.Text = "Deactivate"
         Me.DeactivateButon.UseVisualStyleBackColor = True
         '
-        'Label4
+        'UsernameLabel
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(14, 89)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 14)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Username:"
+        Me.UsernameLabel.AutoSize = True
+        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.Location = New System.Drawing.Point(14, 89)
+        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.UsernameLabel.Size = New System.Drawing.Size(58, 13)
+        Me.UsernameLabel.TabIndex = 6
+        Me.UsernameLabel.Text = "Username:"
         '
         'SaveButton
         '
-        Me.SaveButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveButton.Location = New System.Drawing.Point(123, 240)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(88, 23)
@@ -142,19 +142,19 @@ Partial Class UserManagementForm
         Me.SaveButton.Text = "Save"
         Me.SaveButton.UseVisualStyleBackColor = True
         '
-        'Label5
+        'PasswordLabel
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(14, 129)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 14)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Password:"
+        Me.PasswordLabel.AutoSize = True
+        Me.PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordLabel.Location = New System.Drawing.Point(14, 129)
+        Me.PasswordLabel.Name = "PasswordLabel"
+        Me.PasswordLabel.Size = New System.Drawing.Size(56, 13)
+        Me.PasswordLabel.TabIndex = 7
+        Me.PasswordLabel.Text = "Password:"
         '
         'NewButton
         '
-        Me.NewButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewButton.Location = New System.Drawing.Point(27, 240)
         Me.NewButton.Name = "NewButton"
         Me.NewButton.Size = New System.Drawing.Size(88, 23)
@@ -162,41 +162,41 @@ Partial Class UserManagementForm
         Me.NewButton.Text = "New"
         Me.NewButton.UseVisualStyleBackColor = True
         '
-        'Label6
+        'RoleLabel
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(42, 169)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(42, 14)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Role:"
+        Me.RoleLabel.AutoSize = True
+        Me.RoleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RoleLabel.Location = New System.Drawing.Point(42, 169)
+        Me.RoleLabel.Name = "RoleLabel"
+        Me.RoleLabel.Size = New System.Drawing.Size(32, 13)
+        Me.RoleLabel.TabIndex = 8
+        Me.RoleLabel.Text = "Role:"
         '
         'ActiveCheckBox
         '
         Me.ActiveCheckBox.AutoSize = True
-        Me.ActiveCheckBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ActiveCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ActiveCheckBox.Location = New System.Drawing.Point(249, 208)
         Me.ActiveCheckBox.Name = "ActiveCheckBox"
-        Me.ActiveCheckBox.Size = New System.Drawing.Size(68, 18)
+        Me.ActiveCheckBox.Size = New System.Drawing.Size(56, 17)
         Me.ActiveCheckBox.TabIndex = 13
         Me.ActiveCheckBox.Text = "Active"
         Me.ActiveCheckBox.UseVisualStyleBackColor = True
         '
         'FullNameTextBox
         '
-        Me.FullNameTextBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FullNameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FullNameTextBox.Location = New System.Drawing.Point(90, 46)
         Me.FullNameTextBox.Name = "FullNameTextBox"
-        Me.FullNameTextBox.Size = New System.Drawing.Size(229, 22)
+        Me.FullNameTextBox.Size = New System.Drawing.Size(229, 20)
         Me.FullNameTextBox.TabIndex = 9
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameTextBox.Location = New System.Drawing.Point(90, 86)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(229, 22)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(229, 20)
         Me.UsernameTextBox.TabIndex = 10
         '
         'UsersGrid
@@ -213,30 +213,30 @@ Partial Class UserManagementForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(646, 391)
         Me.Controls.Add(Me.UsersGrid)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.UserDetailsGroupBox)
         Me.Name = "UserManagementForm"
         Me.Text = "User Management Form"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.UserDetailsGroupBox.ResumeLayout(False)
+        Me.UserDetailsGroupBox.PerformLayout()
         CType(Me.UsersGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents UserDetailsGroupBox As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents FullNameLabel As Label
     Friend WithEvents DeactivateButon As Button
-    Friend WithEvents Label4 As Label
+    Friend WithEvents UsernameLabel As Label
     Friend WithEvents SaveButton As Button
-    Friend WithEvents Label5 As Label
+    Friend WithEvents PasswordLabel As Label
     Friend WithEvents NewButton As Button
-    Friend WithEvents Label6 As Label
+    Friend WithEvents RoleLabel As Label
     Friend WithEvents ActiveCheckBox As CheckBox
     Friend WithEvents FullNameTextBox As TextBox
     Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents RoleComboBox As ComboBox
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents UsersGrid As DataGridView
-    Friend WithEvents Label1 As Label
+    Friend WithEvents NoteLabel As Label
 End Class

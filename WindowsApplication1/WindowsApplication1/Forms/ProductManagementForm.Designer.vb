@@ -22,40 +22,40 @@ Partial Class ProductManagementForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.SearchLabel = New System.Windows.Forms.Label()
         Me.SearchTextBox = New System.Windows.Forms.TextBox()
         Me.SearchButton = New System.Windows.Forms.Button()
         Me.RefreshButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BarcodeLabel = New System.Windows.Forms.Label()
+        Me.NameLabel = New System.Windows.Forms.Label()
+        Me.PriceLabel = New System.Windows.Forms.Label()
+        Me.StockLabel = New System.Windows.Forms.Label()
         Me.BarcodeTextBox = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.PriceInput = New System.Windows.Forms.NumericUpDown()
         Me.StockInput = New System.Windows.Forms.NumericUpDown()
         Me.ActiveCheckBox = New System.Windows.Forms.CheckBox()
         Me.NewButton = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.DeactivateButton = New System.Windows.Forms.Button()
-        Me.ProductsGrid = New System.Windows.Forms.DataGridView()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.e = New System.Windows.Forms.DataGridView()
+        Me.ProductDetailsGroupBox = New System.Windows.Forms.GroupBox()
         CType(Me.PriceInput, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StockInput, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ProductsGrid, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        CType(Me.e, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProductDetailsGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'SearchLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(56, 14)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Search:"
+        Me.SearchLabel.AutoSize = True
+        Me.SearchLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchLabel.Location = New System.Drawing.Point(12, 9)
+        Me.SearchLabel.Name = "SearchLabel"
+        Me.SearchLabel.Size = New System.Drawing.Size(44, 13)
+        Me.SearchLabel.TabIndex = 0
+        Me.SearchLabel.Text = "Search:"
         '
         'SearchTextBox
         '
@@ -66,7 +66,7 @@ Partial Class ProductManagementForm
         '
         'SearchButton
         '
-        Me.SearchButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchButton.Location = New System.Drawing.Point(499, 4)
         Me.SearchButton.Name = "SearchButton"
         Me.SearchButton.Size = New System.Drawing.Size(75, 22)
@@ -76,7 +76,7 @@ Partial Class ProductManagementForm
         '
         'RefreshButton
         '
-        Me.RefreshButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RefreshButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RefreshButton.Location = New System.Drawing.Point(580, 4)
         Me.RefreshButton.Name = "RefreshButton"
         Me.RefreshButton.Size = New System.Drawing.Size(75, 22)
@@ -87,99 +87,99 @@ Partial Class ProductManagementForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(6, 16)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(112, 14)
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Product Details"
         '
-        'Label3
+        'BarcodeLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(11, 49)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 14)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Barcode:"
+        Me.BarcodeLabel.AutoSize = True
+        Me.BarcodeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BarcodeLabel.Location = New System.Drawing.Point(11, 49)
+        Me.BarcodeLabel.Name = "BarcodeLabel"
+        Me.BarcodeLabel.Size = New System.Drawing.Size(50, 13)
+        Me.BarcodeLabel.TabIndex = 5
+        Me.BarcodeLabel.Text = "Barcode:"
         '
-        'Label4
+        'NameLabel
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(32, 89)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 14)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Name:"
+        Me.NameLabel.AutoSize = True
+        Me.NameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameLabel.Location = New System.Drawing.Point(32, 89)
+        Me.NameLabel.Name = "NameLabel"
+        Me.NameLabel.Size = New System.Drawing.Size(38, 13)
+        Me.NameLabel.TabIndex = 6
+        Me.NameLabel.Text = "Name:"
         '
-        'Label5
+        'PriceLabel
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(25, 129)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 14)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "Price:"
+        Me.PriceLabel.AutoSize = True
+        Me.PriceLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PriceLabel.Location = New System.Drawing.Point(25, 129)
+        Me.PriceLabel.Name = "PriceLabel"
+        Me.PriceLabel.Size = New System.Drawing.Size(34, 13)
+        Me.PriceLabel.TabIndex = 7
+        Me.PriceLabel.Text = "Price:"
         '
-        'Label6
+        'StockLabel
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(25, 169)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(49, 14)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Stock:"
+        Me.StockLabel.AutoSize = True
+        Me.StockLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StockLabel.Location = New System.Drawing.Point(25, 169)
+        Me.StockLabel.Name = "StockLabel"
+        Me.StockLabel.Size = New System.Drawing.Size(38, 13)
+        Me.StockLabel.TabIndex = 8
+        Me.StockLabel.Text = "Stock:"
         '
         'BarcodeTextBox
         '
-        Me.BarcodeTextBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BarcodeTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BarcodeTextBox.Location = New System.Drawing.Point(80, 46)
         Me.BarcodeTextBox.Name = "BarcodeTextBox"
-        Me.BarcodeTextBox.Size = New System.Drawing.Size(225, 22)
+        Me.BarcodeTextBox.Size = New System.Drawing.Size(225, 20)
         Me.BarcodeTextBox.TabIndex = 9
         '
-        'TextBox3
+        'NameTextBox
         '
-        Me.TextBox3.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(80, 86)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(225, 22)
-        Me.TextBox3.TabIndex = 10
+        Me.NameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NameTextBox.Location = New System.Drawing.Point(80, 86)
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.Size = New System.Drawing.Size(225, 20)
+        Me.NameTextBox.TabIndex = 10
         '
         'PriceInput
         '
-        Me.PriceInput.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PriceInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PriceInput.Location = New System.Drawing.Point(80, 127)
         Me.PriceInput.Name = "PriceInput"
-        Me.PriceInput.Size = New System.Drawing.Size(225, 22)
+        Me.PriceInput.Size = New System.Drawing.Size(225, 20)
         Me.PriceInput.TabIndex = 11
         '
         'StockInput
         '
-        Me.StockInput.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StockInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StockInput.Location = New System.Drawing.Point(80, 167)
         Me.StockInput.Name = "StockInput"
-        Me.StockInput.Size = New System.Drawing.Size(225, 22)
+        Me.StockInput.Size = New System.Drawing.Size(225, 20)
         Me.StockInput.TabIndex = 12
         '
         'ActiveCheckBox
         '
         Me.ActiveCheckBox.AutoSize = True
-        Me.ActiveCheckBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ActiveCheckBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ActiveCheckBox.Location = New System.Drawing.Point(237, 208)
         Me.ActiveCheckBox.Name = "ActiveCheckBox"
-        Me.ActiveCheckBox.Size = New System.Drawing.Size(68, 18)
+        Me.ActiveCheckBox.Size = New System.Drawing.Size(56, 17)
         Me.ActiveCheckBox.TabIndex = 13
         Me.ActiveCheckBox.Text = "Active"
         Me.ActiveCheckBox.UseVisualStyleBackColor = True
         '
         'NewButton
         '
-        Me.NewButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewButton.Location = New System.Drawing.Point(27, 242)
         Me.NewButton.Name = "NewButton"
         Me.NewButton.Size = New System.Drawing.Size(88, 23)
@@ -189,7 +189,7 @@ Partial Class ProductManagementForm
         '
         'SaveButton
         '
-        Me.SaveButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SaveButton.Location = New System.Drawing.Point(123, 242)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(88, 23)
@@ -199,7 +199,7 @@ Partial Class ProductManagementForm
         '
         'DeactivateButton
         '
-        Me.DeactivateButton.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeactivateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DeactivateButton.Location = New System.Drawing.Point(217, 242)
         Me.DeactivateButton.Name = "DeactivateButton"
         Me.DeactivateButton.Size = New System.Drawing.Size(88, 23)
@@ -207,75 +207,75 @@ Partial Class ProductManagementForm
         Me.DeactivateButton.Text = "Deactivate"
         Me.DeactivateButton.UseVisualStyleBackColor = True
         '
-        'ProductsGrid
+        'e
         '
-        Me.ProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ProductsGrid.Location = New System.Drawing.Point(12, 33)
-        Me.ProductsGrid.Name = "ProductsGrid"
-        Me.ProductsGrid.Size = New System.Drawing.Size(309, 365)
-        Me.ProductsGrid.TabIndex = 17
+        Me.e.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.e.Location = New System.Drawing.Point(12, 33)
+        Me.e.Name = "e"
+        Me.e.Size = New System.Drawing.Size(309, 365)
+        Me.e.TabIndex = 17
         '
-        'GroupBox1
+        'ProductDetailsGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.DeactivateButton)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.SaveButton)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.NewButton)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.ActiveCheckBox)
-        Me.GroupBox1.Controls.Add(Me.BarcodeTextBox)
-        Me.GroupBox1.Controls.Add(Me.StockInput)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.PriceInput)
-        Me.GroupBox1.Location = New System.Drawing.Point(330, 33)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(325, 365)
-        Me.GroupBox1.TabIndex = 18
-        Me.GroupBox1.TabStop = False
+        Me.ProductDetailsGroupBox.Controls.Add(Me.Label2)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.BarcodeLabel)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.DeactivateButton)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.NameLabel)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.SaveButton)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.PriceLabel)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.NewButton)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.StockLabel)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.ActiveCheckBox)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.BarcodeTextBox)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.StockInput)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.NameTextBox)
+        Me.ProductDetailsGroupBox.Controls.Add(Me.PriceInput)
+        Me.ProductDetailsGroupBox.Location = New System.Drawing.Point(330, 33)
+        Me.ProductDetailsGroupBox.Name = "ProductDetailsGroupBox"
+        Me.ProductDetailsGroupBox.Size = New System.Drawing.Size(325, 365)
+        Me.ProductDetailsGroupBox.TabIndex = 18
+        Me.ProductDetailsGroupBox.TabStop = False
         '
         'ProductManagementForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(669, 410)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.ProductsGrid)
+        Me.Controls.Add(Me.ProductDetailsGroupBox)
+        Me.Controls.Add(Me.e)
         Me.Controls.Add(Me.RefreshButton)
         Me.Controls.Add(Me.SearchButton)
         Me.Controls.Add(Me.SearchTextBox)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.SearchLabel)
         Me.Name = "ProductManagementForm"
         Me.Text = "Product Management Form"
         CType(Me.PriceInput, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StockInput, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ProductsGrid, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        CType(Me.e, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ProductDetailsGroupBox.ResumeLayout(False)
+        Me.ProductDetailsGroupBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents SearchLabel As Label
     Friend WithEvents SearchTextBox As TextBox
     Friend WithEvents SearchButton As Button
     Friend WithEvents RefreshButton As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents BarcodeLabel As Label
+    Friend WithEvents NameLabel As Label
+    Friend WithEvents PriceLabel As Label
+    Friend WithEvents StockLabel As Label
     Friend WithEvents BarcodeTextBox As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents NameTextBox As TextBox
     Friend WithEvents PriceInput As NumericUpDown
     Friend WithEvents StockInput As NumericUpDown
     Friend WithEvents ActiveCheckBox As CheckBox
     Friend WithEvents NewButton As Button
     Friend WithEvents SaveButton As Button
     Friend WithEvents DeactivateButton As Button
-    Friend WithEvents ProductsGrid As DataGridView
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents e As DataGridView
+    Friend WithEvents ProductDetailsGroupBox As GroupBox
 End Class

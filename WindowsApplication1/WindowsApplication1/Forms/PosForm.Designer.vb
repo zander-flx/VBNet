@@ -22,9 +22,9 @@ Partial Class PosForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.lblCashPOS = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TitleLabel = New System.Windows.Forms.Label()
+        Me.UserLabel = New System.Windows.Forms.Label()
+        Me.ScanLabel = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ScanTextBox = New System.Windows.Forms.TextBox()
         Me.CartGrid = New System.Windows.Forms.DataGridView()
@@ -34,46 +34,47 @@ Partial Class PosForm
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TotalLabel = New System.Windows.Forms.Label()
+        Me.StatusLabel = New System.Windows.Forms.Label()
         CType(Me.CartGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblCashPOS
+        'TitleLabel
         '
-        Me.lblCashPOS.AutoSize = True
-        Me.lblCashPOS.Font = New System.Drawing.Font("JetBrains Mono ExtraBold", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCashPOS.Location = New System.Drawing.Point(11, 14)
-        Me.lblCashPOS.Name = "lblCashPOS"
-        Me.lblCashPOS.Size = New System.Drawing.Size(96, 18)
-        Me.lblCashPOS.TabIndex = 0
-        Me.lblCashPOS.Text = "Cashier POS"
+        Me.TitleLabel.AutoSize = True
+        Me.TitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TitleLabel.Location = New System.Drawing.Point(11, 14)
+        Me.TitleLabel.Name = "TitleLabel"
+        Me.TitleLabel.Size = New System.Drawing.Size(89, 17)
+        Me.TitleLabel.TabIndex = 0
+        Me.TitleLabel.Text = "Cashier POS"
         '
-        'Label1
+        'UserLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 14)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Logged in as Cashier"
+        Me.UserLabel.AutoSize = True
+        Me.UserLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserLabel.Location = New System.Drawing.Point(11, 43)
+        Me.UserLabel.Name = "UserLabel"
+        Me.UserLabel.Size = New System.Drawing.Size(106, 13)
+        Me.UserLabel.TabIndex = 1
+        Me.UserLabel.Text = "Logged in as Cashier"
         '
-        'Label2
+        'ScanLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(11, 84)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 14)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Scan/Type Barcode"
+        Me.ScanLabel.AutoSize = True
+        Me.ScanLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ScanLabel.Location = New System.Drawing.Point(11, 84)
+        Me.ScanLabel.Name = "ScanLabel"
+        Me.ScanLabel.Size = New System.Drawing.Size(104, 13)
+        Me.ScanLabel.TabIndex = 2
+        Me.ScanLabel.Text = "Scan/Type Barcode"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(373, 84)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 14)
+        Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Example: "
         '
@@ -81,7 +82,7 @@ Partial Class PosForm
         '
         Me.ScanTextBox.Location = New System.Drawing.Point(14, 108)
         Me.ScanTextBox.Name = "ScanTextBox"
-        Me.ScanTextBox.Size = New System.Drawing.Size(629, 22)
+        Me.ScanTextBox.Size = New System.Drawing.Size(629, 20)
         Me.ScanTextBox.TabIndex = 4
         '
         'CartGrid
@@ -131,28 +132,38 @@ Partial Class PosForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("JetBrains Mono NL", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(274, 356)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(56, 18)
+        Me.Label4.Size = New System.Drawing.Size(44, 17)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Total:"
         '
         'TotalLabel
         '
         Me.TotalLabel.AutoSize = True
-        Me.TotalLabel.Font = New System.Drawing.Font("JetBrains Mono NL", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TotalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TotalLabel.Location = New System.Drawing.Point(336, 356)
         Me.TotalLabel.Name = "TotalLabel"
-        Me.TotalLabel.Size = New System.Drawing.Size(40, 18)
+        Me.TotalLabel.Size = New System.Drawing.Size(36, 17)
         Me.TotalLabel.TabIndex = 11
         Me.TotalLabel.Text = "0.00"
         '
+        'StatusLabel
+        '
+        Me.StatusLabel.AutoSize = True
+        Me.StatusLabel.Location = New System.Drawing.Point(12, 383)
+        Me.StatusLabel.Name = "StatusLabel"
+        Me.StatusLabel.Size = New System.Drawing.Size(148, 13)
+        Me.StatusLabel.TabIndex = 12
+        Me.StatusLabel.Text = "Staatus message appear here"
+        '
         'PosForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(671, 401)
+        Me.Controls.Add(Me.StatusLabel)
         Me.Controls.Add(Me.TotalLabel)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.SaveButton)
@@ -162,10 +173,10 @@ Partial Class PosForm
         Me.Controls.Add(Me.CartGrid)
         Me.Controls.Add(Me.ScanTextBox)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lblCashPOS)
-        Me.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Controls.Add(Me.ScanLabel)
+        Me.Controls.Add(Me.UserLabel)
+        Me.Controls.Add(Me.TitleLabel)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "PosForm"
         Me.Text = "Pos Form"
         CType(Me.CartGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -174,9 +185,9 @@ Partial Class PosForm
 
     End Sub
 
-    Friend WithEvents lblCashPOS As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents TitleLabel As Label
+    Friend WithEvents UserLabel As Label
+    Friend WithEvents ScanLabel As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ScanTextBox As TextBox
     Friend WithEvents CartGrid As DataGridView
@@ -186,4 +197,5 @@ Partial Class PosForm
     Friend WithEvents SaveButton As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents TotalLabel As Label
+    Friend WithEvents StatusLabel As Label
 End Class

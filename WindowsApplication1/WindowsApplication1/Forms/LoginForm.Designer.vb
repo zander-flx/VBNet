@@ -22,64 +22,65 @@ Partial Class LoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TitleLabel = New System.Windows.Forms.Label()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.LoginButton = New System.Windows.Forms.Button()
         Me.MessageLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'Label1
+        'TitleLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("JetBrains Mono ExtraBold", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 39)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(252, 26)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Point of Sale System"
+        Me.TitleLabel.AutoSize = True
+        Me.TitleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TitleLabel.Location = New System.Drawing.Point(12, 39)
+        Me.TitleLabel.Name = "TitleLabel"
+        Me.TitleLabel.Size = New System.Drawing.Size(193, 25)
+        Me.TitleLabel.TabIndex = 0
+        Me.TitleLabel.Text = "Point of Sale System"
         '
-        'Label2
+        'UsernameLabel
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(14, 109)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 14)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Username:"
+        Me.UsernameLabel.AutoSize = True
+        Me.UsernameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameLabel.Location = New System.Drawing.Point(14, 109)
+        Me.UsernameLabel.Name = "UsernameLabel"
+        Me.UsernameLabel.Size = New System.Drawing.Size(58, 13)
+        Me.UsernameLabel.TabIndex = 1
+        Me.UsernameLabel.Text = "Username:"
         '
-        'Label3
+        'PasswordLabel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(16, 158)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 14)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Password:"
+        Me.PasswordLabel.AutoSize = True
+        Me.PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordLabel.Location = New System.Drawing.Point(16, 158)
+        Me.PasswordLabel.Name = "PasswordLabel"
+        Me.PasswordLabel.Size = New System.Drawing.Size(56, 13)
+        Me.PasswordLabel.TabIndex = 2
+        Me.PasswordLabel.Text = "Password:"
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UsernameTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UsernameTextBox.Location = New System.Drawing.Point(90, 106)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(174, 22)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(174, 20)
         Me.UsernameTextBox.TabIndex = 3
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Font = New System.Drawing.Font("JetBrains Mono NL", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PasswordTextBox.Location = New System.Drawing.Point(90, 155)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.Size = New System.Drawing.Size(174, 22)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(174, 20)
         Me.PasswordTextBox.TabIndex = 4
+        Me.PasswordTextBox.UseSystemPasswordChar = True
         '
         'LoginButton
         '
-        Me.LoginButton.Font = New System.Drawing.Font("JetBrains Mono NL", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LoginButton.Location = New System.Drawing.Point(189, 209)
         Me.LoginButton.Name = "LoginButton"
         Me.LoginButton.Size = New System.Drawing.Size(75, 28)
@@ -90,10 +91,10 @@ Partial Class LoginForm
         'MessageLabel
         '
         Me.MessageLabel.AutoSize = True
-        Me.MessageLabel.Font = New System.Drawing.Font("JetBrains Mono NL", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MessageLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MessageLabel.Location = New System.Drawing.Point(12, 240)
         Me.MessageLabel.Name = "MessageLabel"
-        Me.MessageLabel.Size = New System.Drawing.Size(259, 13)
+        Me.MessageLabel.Size = New System.Drawing.Size(215, 13)
         Me.MessageLabel.TabIndex = 6
         Me.MessageLabel.Text = "Invalid username or password appears here." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
@@ -106,9 +107,9 @@ Partial Class LoginForm
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.PasswordTextBox)
         Me.Controls.Add(Me.UsernameTextBox)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PasswordLabel)
+        Me.Controls.Add(Me.UsernameLabel)
+        Me.Controls.Add(Me.TitleLabel)
         Me.Name = "LoginForm"
         Me.Text = "LoginForm"
         Me.ResumeLayout(False)
@@ -116,9 +117,9 @@ Partial Class LoginForm
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents TitleLabel As Label
+    Friend WithEvents UsernameLabel As Label
+    Friend WithEvents PasswordLabel As Label
     Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents LoginButton As Button
