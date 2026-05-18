@@ -39,11 +39,11 @@ Partial Class ProductManagementForm
         Me.NewButton = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.DeactivateButton = New System.Windows.Forms.Button()
-        Me.e = New System.Windows.Forms.DataGridView()
+        Me.ProductsGrid = New System.Windows.Forms.DataGridView()
         Me.ProductDetailsGroupBox = New System.Windows.Forms.GroupBox()
         CType(Me.PriceInput, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StockInput, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.e, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductsGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ProductDetailsGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -152,8 +152,10 @@ Partial Class ProductManagementForm
         '
         'PriceInput
         '
+        Me.PriceInput.DecimalPlaces = 2
         Me.PriceInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PriceInput.Location = New System.Drawing.Point(80, 127)
+        Me.PriceInput.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.PriceInput.Name = "PriceInput"
         Me.PriceInput.Size = New System.Drawing.Size(225, 20)
         Me.PriceInput.TabIndex = 11
@@ -162,6 +164,7 @@ Partial Class ProductManagementForm
         '
         Me.StockInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StockInput.Location = New System.Drawing.Point(80, 167)
+        Me.StockInput.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.StockInput.Name = "StockInput"
         Me.StockInput.Size = New System.Drawing.Size(225, 20)
         Me.StockInput.TabIndex = 12
@@ -207,13 +210,15 @@ Partial Class ProductManagementForm
         Me.DeactivateButton.Text = "Deactivate"
         Me.DeactivateButton.UseVisualStyleBackColor = True
         '
-        'e
+        'ProductsGrid
         '
-        Me.e.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.e.Location = New System.Drawing.Point(12, 33)
-        Me.e.Name = "e"
-        Me.e.Size = New System.Drawing.Size(309, 365)
-        Me.e.TabIndex = 17
+        Me.ProductsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProductsGrid.Location = New System.Drawing.Point(12, 33)
+        Me.ProductsGrid.MultiSelect = False
+        Me.ProductsGrid.Name = "ProductsGrid"
+        Me.ProductsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.ProductsGrid.Size = New System.Drawing.Size(309, 365)
+        Me.ProductsGrid.TabIndex = 17
         '
         'ProductDetailsGroupBox
         '
@@ -242,7 +247,7 @@ Partial Class ProductManagementForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(669, 410)
         Me.Controls.Add(Me.ProductDetailsGroupBox)
-        Me.Controls.Add(Me.e)
+        Me.Controls.Add(Me.ProductsGrid)
         Me.Controls.Add(Me.RefreshButton)
         Me.Controls.Add(Me.SearchButton)
         Me.Controls.Add(Me.SearchTextBox)
@@ -251,7 +256,7 @@ Partial Class ProductManagementForm
         Me.Text = "Product Management Form"
         CType(Me.PriceInput, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StockInput, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.e, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductsGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ProductDetailsGroupBox.ResumeLayout(False)
         Me.ProductDetailsGroupBox.PerformLayout()
         Me.ResumeLayout(False)
@@ -276,6 +281,6 @@ Partial Class ProductManagementForm
     Friend WithEvents NewButton As Button
     Friend WithEvents SaveButton As Button
     Friend WithEvents DeactivateButton As Button
-    Friend WithEvents e As DataGridView
+    Friend WithEvents ProductsGrid As DataGridView
     Friend WithEvents ProductDetailsGroupBox As GroupBox
 End Class

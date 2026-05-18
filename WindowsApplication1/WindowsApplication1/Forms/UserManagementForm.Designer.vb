@@ -28,7 +28,7 @@ Partial Class UserManagementForm
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.FullNameLabel = New System.Windows.Forms.Label()
-        Me.DeactivateButon = New System.Windows.Forms.Button()
+        Me.DeactivateButton = New System.Windows.Forms.Button()
         Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.PasswordLabel = New System.Windows.Forms.Label()
@@ -49,7 +49,7 @@ Partial Class UserManagementForm
         Me.UserDetailsGroupBox.Controls.Add(Me.PasswordTextBox)
         Me.UserDetailsGroupBox.Controls.Add(Me.Label2)
         Me.UserDetailsGroupBox.Controls.Add(Me.FullNameLabel)
-        Me.UserDetailsGroupBox.Controls.Add(Me.DeactivateButon)
+        Me.UserDetailsGroupBox.Controls.Add(Me.DeactivateButton)
         Me.UserDetailsGroupBox.Controls.Add(Me.UsernameLabel)
         Me.UserDetailsGroupBox.Controls.Add(Me.SaveButton)
         Me.UserDetailsGroupBox.Controls.Add(Me.PasswordLabel)
@@ -76,9 +76,9 @@ Partial Class UserManagementForm
         '
         'RoleComboBox
         '
+        Me.RoleComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.RoleComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RoleComboBox.FormattingEnabled = True
-        Me.RoleComboBox.Items.AddRange(New Object() {"Admin", "Cashier"})
         Me.RoleComboBox.Location = New System.Drawing.Point(90, 166)
         Me.RoleComboBox.Name = "RoleComboBox"
         Me.RoleComboBox.Size = New System.Drawing.Size(229, 21)
@@ -91,6 +91,7 @@ Partial Class UserManagementForm
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.Size = New System.Drawing.Size(229, 20)
         Me.PasswordTextBox.TabIndex = 17
+        Me.PasswordTextBox.UseSystemPasswordChar = True
         '
         'Label2
         '
@@ -112,15 +113,15 @@ Partial Class UserManagementForm
         Me.FullNameLabel.TabIndex = 5
         Me.FullNameLabel.Text = "Full Name:"
         '
-        'DeactivateButon
+        'DeactivateButton
         '
-        Me.DeactivateButon.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeactivateButon.Location = New System.Drawing.Point(217, 240)
-        Me.DeactivateButon.Name = "DeactivateButon"
-        Me.DeactivateButon.Size = New System.Drawing.Size(88, 23)
-        Me.DeactivateButon.TabIndex = 16
-        Me.DeactivateButon.Text = "Deactivate"
-        Me.DeactivateButon.UseVisualStyleBackColor = True
+        Me.DeactivateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeactivateButton.Location = New System.Drawing.Point(217, 240)
+        Me.DeactivateButton.Name = "DeactivateButton"
+        Me.DeactivateButton.Size = New System.Drawing.Size(88, 23)
+        Me.DeactivateButton.TabIndex = 16
+        Me.DeactivateButton.Text = "Deactivate"
+        Me.DeactivateButton.UseVisualStyleBackColor = True
         '
         'UsernameLabel
         '
@@ -226,7 +227,7 @@ Partial Class UserManagementForm
     Friend WithEvents UserDetailsGroupBox As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents FullNameLabel As Label
-    Friend WithEvents DeactivateButon As Button
+    Friend WithEvents DeactivateButton As Button
     Friend WithEvents UsernameLabel As Label
     Friend WithEvents SaveButton As Button
     Friend WithEvents PasswordLabel As Label

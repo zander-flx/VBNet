@@ -28,12 +28,12 @@ Partial Class PosForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ScanTextBox = New System.Windows.Forms.TextBox()
         Me.CartGrid = New System.Windows.Forms.DataGridView()
-        Me.RemoveButon = New System.Windows.Forms.Button()
+        Me.RemoveButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.LogoutButton = New System.Windows.Forms.Button()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TotalLabel = New System.Windows.Forms.Label()
+        Me.LineTotal = New System.Windows.Forms.Label()
         Me.StatusLabel = New System.Windows.Forms.Label()
         CType(Me.CartGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -89,18 +89,21 @@ Partial Class PosForm
         '
         Me.CartGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CartGrid.Location = New System.Drawing.Point(14, 145)
+        Me.CartGrid.MultiSelect = False
         Me.CartGrid.Name = "CartGrid"
+        Me.CartGrid.ReadOnly = True
+        Me.CartGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.CartGrid.Size = New System.Drawing.Size(629, 183)
         Me.CartGrid.TabIndex = 5
         '
-        'RemoveButon
+        'RemoveButton
         '
-        Me.RemoveButon.Location = New System.Drawing.Point(14, 350)
-        Me.RemoveButon.Name = "RemoveButon"
-        Me.RemoveButon.Size = New System.Drawing.Size(106, 30)
-        Me.RemoveButon.TabIndex = 6
-        Me.RemoveButon.Text = "Remove Item"
-        Me.RemoveButon.UseVisualStyleBackColor = True
+        Me.RemoveButton.Location = New System.Drawing.Point(14, 350)
+        Me.RemoveButton.Name = "RemoveButton"
+        Me.RemoveButton.Size = New System.Drawing.Size(106, 30)
+        Me.RemoveButton.TabIndex = 6
+        Me.RemoveButton.Text = "Remove Item"
+        Me.RemoveButton.UseVisualStyleBackColor = True
         '
         'ClearButton
         '
@@ -139,15 +142,15 @@ Partial Class PosForm
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Total:"
         '
-        'TotalLabel
+        'LineTotal
         '
-        Me.TotalLabel.AutoSize = True
-        Me.TotalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TotalLabel.Location = New System.Drawing.Point(336, 356)
-        Me.TotalLabel.Name = "TotalLabel"
-        Me.TotalLabel.Size = New System.Drawing.Size(36, 17)
-        Me.TotalLabel.TabIndex = 11
-        Me.TotalLabel.Text = "0.00"
+        Me.LineTotal.AutoSize = True
+        Me.LineTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LineTotal.Location = New System.Drawing.Point(336, 356)
+        Me.LineTotal.Name = "LineTotal"
+        Me.LineTotal.Size = New System.Drawing.Size(36, 17)
+        Me.LineTotal.TabIndex = 11
+        Me.LineTotal.Text = "0.00"
         '
         'StatusLabel
         '
@@ -164,12 +167,12 @@ Partial Class PosForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(671, 401)
         Me.Controls.Add(Me.StatusLabel)
-        Me.Controls.Add(Me.TotalLabel)
+        Me.Controls.Add(Me.LineTotal)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.LogoutButton)
         Me.Controls.Add(Me.ClearButton)
-        Me.Controls.Add(Me.RemoveButon)
+        Me.Controls.Add(Me.RemoveButton)
         Me.Controls.Add(Me.CartGrid)
         Me.Controls.Add(Me.ScanTextBox)
         Me.Controls.Add(Me.Label3)
@@ -191,11 +194,11 @@ Partial Class PosForm
     Friend WithEvents Label3 As Label
     Friend WithEvents ScanTextBox As TextBox
     Friend WithEvents CartGrid As DataGridView
-    Friend WithEvents RemoveButon As Button
+    Friend WithEvents RemoveButton As Button
     Friend WithEvents ClearButton As Button
     Friend WithEvents LogoutButton As Button
     Friend WithEvents SaveButton As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents TotalLabel As Label
+    Friend WithEvents LineTotal As Label
     Friend WithEvents StatusLabel As Label
 End Class

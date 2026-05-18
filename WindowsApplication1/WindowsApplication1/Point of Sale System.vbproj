@@ -129,6 +129,7 @@
     <Compile Include="Models\Sale.vb" />
     <Compile Include="Models\SaleItem.vb" />
     <Compile Include="Models\Product.vb" />
+    <Compile Include="Models\ScanRequest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -150,9 +151,12 @@
     <Compile Include="Repositories\SaleRepository.vb" />
     <Compile Include="Repositories\UserRepository.vb" />
     <Compile Include="Services\AuthService.vb" />
+    <Compile Include="Services\BarcodeScanService.vb" />
     <Compile Include="Services\PasswordHasher.vb" />
     <Compile Include="Services\ProductService.vb" />
+    <Compile Include="Services\SaleService.vb" />
     <Compile Include="Services\Session.vb" />
+    <Compile Include="Services\UserService.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\AdminDashboardForm.resx">
