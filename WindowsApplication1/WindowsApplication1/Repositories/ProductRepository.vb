@@ -143,23 +143,6 @@ Namespace Repositories
 
         End Sub
 
-        Public Function GetAll(Optional IncludeInactive As Boolean = False) As List(Of Product)
-            Dim products As New List(Of Product)()
-            Using connection = _factory.CreateConnection()
-                connection.Open()
-                Dim sql = ""
-                If Not IncludeInactive Then
-                    sql &= ""
-                End If
-                sql &= ""
-
-                Using command As New MySqlCommand(sql, connection)
-                    Using reader = command
-                    End Using
-                End Using
-            End Using
-        End Function
-
         Private Sub FillProductParameters(command As MySqlCommand, product As Product)
 
             command.Parameters.AddWithValue("@barcode", product.Barcode)
