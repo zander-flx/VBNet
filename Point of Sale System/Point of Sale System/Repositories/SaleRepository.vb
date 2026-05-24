@@ -11,14 +11,12 @@ Namespace Repositories
                 connection.Open()
                 Using transaction = connection.BeginTransaction()
                     Try
-                        ' 1. Save the Sale Header and get the new Sale ID
                         Using command As New MySqlCommand("INSERT INTO sales(cashier_id, total_amount) VALUES(@cashierId,@total); SELECT LAST_INSERT_ID();", connection, transaction)
                             command.Parameters.AddWithValue("@cashierId", sale.CashierId)
                             command.Parameters.AddWithValue("@total", sale.TotalAmount)
                             sale.Id = Convert.ToInt32(command.ExecuteScalar())
                         End Using
 
-                        ' 2. Save each Sale Item
                         For Each item In sale.Items
                             Using itemCommand As New MySqlCommand("INSERT INTO sale_items(sale_id, product_id, quantity, unit_price, line_total) VALUES(@saleId,@productId,@quantity,@unitPrice,@lineTotal)", connection, transaction)
                                 itemCommand.Parameters.AddWithValue("@saleId", sale.Id)
@@ -28,15 +26,23 @@ Namespace Repositories
                                 itemCommand.Parameters.AddWithValue("@lineTotal", item.LineTotal)
                                 itemCommand.ExecuteNonQuery()
                             End Using
+
+                            Using stockCommand As New MySqlCommand("UPDATE products SET stock_quantity = stock_quantity - @quantity WHERE id = @productId AND stock_quantity >= @quantity", connection, transaction)
+                                stockCommand.Parameters.AddWithValue("@quantity", item.Quantity)
+                                stockCommand.Parameters.AddWithValue("@productId", item.ProductId)
+                                Dim rowsAffected = stockCommand.ExecuteNonQuery()
+
+                                If rowsAffected = 0 Then
+                                    Throw New Exception("Insufficient stock for product ID: " & item.ProductId)
+                                End If
+                            End Using
                         Next
 
-                        ' 3. Commit the transaction if everything succeeded
                         transaction.Commit()
                         Return sale.Id
-                    Catch
-                        ' 4. Rollback if anything failed
+                    Catch ex As Exception
                         transaction.Rollback()
-                        Throw
+                        Throw New Exception("Error saving sale: " & ex.Message)
                     End Try
                 End Using
             End Using
