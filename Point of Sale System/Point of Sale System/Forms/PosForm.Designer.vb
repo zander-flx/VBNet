@@ -148,9 +148,9 @@ Partial Class PosForm
         Me.StatusLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StatusLabel.Location = New System.Drawing.Point(9, 425)
         Me.StatusLabel.Name = "StatusLabel"
-        Me.StatusLabel.Size = New System.Drawing.Size(199, 17)
+        Me.StatusLabel.Size = New System.Drawing.Size(191, 17)
         Me.StatusLabel.TabIndex = 12
-        Me.StatusLabel.Text = "Staatus message appear here"
+        Me.StatusLabel.Text = "Status message appear here"
         '
         'PosForm
         '
