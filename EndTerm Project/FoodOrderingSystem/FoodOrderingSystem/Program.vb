@@ -1,3 +1,10 @@
-﻿Public Class Program
+﻿Imports System.Windows.Forms
 
-End Class
+Module Program
+    <STAThread>
+    Public Sub Main()
+        Application.EnableVisualStyles()
+        Application.SetCompatibleTextRenderingDefault(False)
+        Application.Run(New LoginForm())
+    End Sub
+End Module

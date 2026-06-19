@@ -82,11 +82,40 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DbConnectionFactory.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="Forms\AdminDashboard.Designer.vb">
+      <DependentUpon>AdminDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Forms\CategoryManagementForm.Designer.vb">
+      <DependentUpon>CategoryManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuManagementForm.Designer.vb">
+      <DependentUpon>MenuManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderForm.Designer.vb">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderManagementForm.Designer.vb">
+      <DependentUpon>OrderManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderManagementForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\AppUser.vb" />
@@ -109,6 +138,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Program.vb" />
     <Compile Include="Repositories\CategoryRepository.vb" />
     <Compile Include="Repositories\MenuItemRepository.vb" />
     <Compile Include="Repositories\OrderRepository.vb" />
@@ -142,8 +172,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
