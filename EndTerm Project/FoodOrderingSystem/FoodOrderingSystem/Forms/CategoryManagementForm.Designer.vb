@@ -22,9 +22,158 @@ Partial Class CategoryManagementForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.SearchTextBox = New System.Windows.Forms.TextBox()
+        Me.CategoriesGrid = New System.Windows.Forms.DataGridView()
+        Me.UserDetailsGroupBox = New System.Windows.Forms.GroupBox()
+        Me.SaveButton = New System.Windows.Forms.Button()
+        Me.DeactivateButton = New System.Windows.Forms.Button()
+        Me.NewButton = New System.Windows.Forms.Button()
+        Me.DescriptionTextBox = New System.Windows.Forms.Label()
+        Me.FullNameLabel = New System.Windows.Forms.Label()
+        Me.ActiveCheckBox = New System.Windows.Forms.CheckBox()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
+        CType(Me.CategoriesGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.UserDetailsGroupBox.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'SearchTextBox
+        '
+        Me.SearchTextBox.Location = New System.Drawing.Point(79, 27)
+        Me.SearchTextBox.Name = "SearchTextBox"
+        Me.SearchTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.SearchTextBox.TabIndex = 0
+        '
+        'CategoriesGrid
+        '
+        Me.CategoriesGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.CategoriesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CategoriesGrid.Location = New System.Drawing.Point(79, 85)
+        Me.CategoriesGrid.Name = "CategoriesGrid"
+        Me.CategoriesGrid.ReadOnly = True
+        Me.CategoriesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.CategoriesGrid.Size = New System.Drawing.Size(240, 150)
+        Me.CategoriesGrid.TabIndex = 1
+        '
+        'UserDetailsGroupBox
+        '
+        Me.UserDetailsGroupBox.Controls.Add(Me.SaveButton)
+        Me.UserDetailsGroupBox.Controls.Add(Me.DeactivateButton)
+        Me.UserDetailsGroupBox.Controls.Add(Me.NewButton)
+        Me.UserDetailsGroupBox.Controls.Add(Me.DescriptionTextBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.FullNameLabel)
+        Me.UserDetailsGroupBox.Controls.Add(Me.ActiveCheckBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.UsernameTextBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.NameTextBox)
+        Me.UserDetailsGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserDetailsGroupBox.Location = New System.Drawing.Point(338, 39)
+        Me.UserDetailsGroupBox.Name = "UserDetailsGroupBox"
+        Me.UserDetailsGroupBox.Size = New System.Drawing.Size(317, 399)
+        Me.UserDetailsGroupBox.TabIndex = 7
+        Me.UserDetailsGroupBox.TabStop = False
+        Me.UserDetailsGroupBox.Text = "Category Details"
+        '
+        'SaveButton
+        '
+        Me.SaveButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaveButton.Location = New System.Drawing.Point(117, 302)
+        Me.SaveButton.Name = "SaveButton"
+        Me.SaveButton.Size = New System.Drawing.Size(85, 30)
+        Me.SaveButton.TabIndex = 11
+        Me.SaveButton.Text = "Save"
+        Me.SaveButton.UseVisualStyleBackColor = True
+        '
+        'DeactivateButton
+        '
+        Me.DeactivateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeactivateButton.Location = New System.Drawing.Point(226, 302)
+        Me.DeactivateButton.Name = "DeactivateButton"
+        Me.DeactivateButton.Size = New System.Drawing.Size(85, 30)
+        Me.DeactivateButton.TabIndex = 10
+        Me.DeactivateButton.Text = "Deactivate"
+        Me.DeactivateButton.UseVisualStyleBackColor = True
+        '
+        'NewButton
+        '
+        Me.NewButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NewButton.Location = New System.Drawing.Point(6, 302)
+        Me.NewButton.Name = "NewButton"
+        Me.NewButton.Size = New System.Drawing.Size(85, 30)
+        Me.NewButton.TabIndex = 9
+        Me.NewButton.Text = "New"
+        Me.NewButton.UseVisualStyleBackColor = True
+        '
+        'DescriptionTextBox
+        '
+        Me.DescriptionTextBox.AutoSize = True
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(6, 96)
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(79, 17)
+        Me.DescriptionTextBox.TabIndex = 6
+        Me.DescriptionTextBox.Text = "Description"
+        '
+        'FullNameLabel
+        '
+        Me.FullNameLabel.AutoSize = True
+        Me.FullNameLabel.Location = New System.Drawing.Point(6, 38)
+        Me.FullNameLabel.Name = "FullNameLabel"
+        Me.FullNameLabel.Size = New System.Drawing.Size(45, 17)
+        Me.FullNameLabel.TabIndex = 5
+        Me.FullNameLabel.Text = "Name"
+        '
+        'ActiveCheckBox
+        '
+        Me.ActiveCheckBox.AutoSize = True
+        Me.ActiveCheckBox.Checked = True
+        Me.ActiveCheckBox.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ActiveCheckBox.Location = New System.Drawing.Point(87, 257)
+        Me.ActiveCheckBox.Name = "ActiveCheckBox"
+        Me.ActiveCheckBox.Size = New System.Drawing.Size(65, 21)
+        Me.ActiveCheckBox.TabIndex = 4
+        Me.ActiveCheckBox.Text = "Active"
+        Me.ActiveCheckBox.UseVisualStyleBackColor = True
+        '
+        'UsernameTextBox
+        '
+        Me.UsernameTextBox.Location = New System.Drawing.Point(87, 90)
+        Me.UsernameTextBox.Name = "UsernameTextBox"
+        Me.UsernameTextBox.Size = New System.Drawing.Size(224, 23)
+        Me.UsernameTextBox.TabIndex = 1
+        '
+        'NameTextBox
+        '
+        Me.NameTextBox.Location = New System.Drawing.Point(87, 35)
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.Size = New System.Drawing.Size(224, 23)
+        Me.NameTextBox.TabIndex = 0
+        '
+        'CategoryManagementForm
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.UserDetailsGroupBox)
+        Me.Controls.Add(Me.CategoriesGrid)
+        Me.Controls.Add(Me.SearchTextBox)
+        Me.Name = "CategoryManagementForm"
         Me.Text = "CategoryManagementForm"
+        CType(Me.CategoriesGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.UserDetailsGroupBox.ResumeLayout(False)
+        Me.UserDetailsGroupBox.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents SearchTextBox As TextBox
+    Friend WithEvents CategoriesGrid As DataGridView
+    Friend WithEvents UserDetailsGroupBox As GroupBox
+    Friend WithEvents SaveButton As Button
+    Friend WithEvents DeactivateButton As Button
+    Friend WithEvents NewButton As Button
+    Friend WithEvents DescriptionTextBox As Label
+    Friend WithEvents FullNameLabel As Label
+    Friend WithEvents ActiveCheckBox As CheckBox
+    Friend WithEvents UsernameTextBox As TextBox
+    Friend WithEvents NameTextBox As TextBox
 End Class

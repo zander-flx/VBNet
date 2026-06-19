@@ -82,10 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DbConnectionFactory.vb" />
-    <Compile Include="Forms\AdminDashboard.Designer.vb">
-      <DependentUpon>AdminDashboard.vb</DependentUpon>
+    <Compile Include="Forms\AdminDashboardForm.Designer.vb">
+      <DependentUpon>AdminDashboardForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AdminDashboard.vb">
+    <Compile Include="Forms\AdminDashboardForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CategoryManagementForm.Designer.vb">
@@ -118,6 +118,12 @@
     <Compile Include="Forms\OrderManagementForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\UserManagementForm.Designer.vb">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserManagementForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Models\AppUser.vb" />
     <Compile Include="Models\Category.vb" />
     <Compile Include="Models\MenuItem.vb" />
@@ -127,6 +133,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -152,6 +159,27 @@
     <Compile Include="Services\UserService.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AdminDashboardForm.resx">
+      <DependentUpon>AdminDashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryManagementForm.resx">
+      <DependentUpon>CategoryManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuManagementForm.resx">
+      <DependentUpon>MenuManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderForm.resx">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderManagementForm.resx">
+      <DependentUpon>OrderManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserManagementForm.resx">
+      <DependentUpon>UserManagementForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
