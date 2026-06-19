@@ -10,8 +10,16 @@ Partial Public Class OrderForm
 
     Public Sub New()
         InitializeComponent()
+
+        ' Show cashier name
         UserLabel.Text = "Staff: " & If(Session.CurrentUser Is Nothing, "Guest", Session.CurrentUser.FullName)
         CartGrid.DataSource = _cart
+
+        ' ✅ FIX: Set default selection to prevent Null Reference errors
+        If OrderTypeComboBox.Items.Count > 0 Then
+            OrderTypeComboBox.SelectedIndex = 0
+        End If
+
         LoadCategories()
         LoadMenu()
     End Sub
@@ -26,15 +34,39 @@ Partial Public Class OrderForm
     End Sub
 
     Private Sub LoadMenu()
-        Dim catId = If(CategoryComboBox.SelectedValue, 0)
-        Dim items = If(catId = 0, _itemService.GetAll(), _itemService.GetByCategory(catId))
+        ' 1. Safely extract category ID (handles Nothing, DBNull, and init state)
+        Dim catId As Integer = 0
+        Dim selVal = CategoryComboBox.SelectedValue
+
+        If selVal IsNot Nothing AndAlso TypeOf selVal Is Integer Then
+            catId = CInt(selVal)
+        End If
+
+        ' 2. Fetch items (wrapped to prevent load-time crashes)
+        Dim items As List(Of MenuItem) = Nothing
+        Try
+            items = If(catId = 0, _itemService.GetAll(), _itemService.GetByCategory(catId))
+        Catch ex As Exception
+            ' Silently ignore DB errors during form initialization
+            items = New List(Of MenuItem)()
+        End Try
+
+        ' 3. Guarantee list is never Nothing
+        If items Is Nothing Then items = New List(Of MenuItem)()
+
+        ' 4. Apply search filter if user typed something
         If Not String.IsNullOrWhiteSpace(SearchTextBox.Text) Then
             items = items.Where(Function(i) i.Name.ToLower().Contains(SearchTextBox.Text.ToLower())).ToList()
         End If
+
+        ' 5. Bind to grid
         MenuGrid.DataSource = items
     End Sub
 
     Private Sub CategoryComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CategoryComboBox.SelectedIndexChanged
+        ' Prevents the event from running during form startup
+        If CategoryComboBox.SelectedIndex < 0 Then Return
+
         LoadMenu()
     End Sub
 
@@ -110,22 +142,47 @@ Partial Public Class OrderForm
     End Sub
 
     Private Sub OrderTypeComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OrderTypeComboBox.SelectedIndexChanged
+        ' ✅ FIX: Stop if nothing is selected
+        If OrderTypeComboBox.SelectedItem Is Nothing Then Return
+
         Dim type = OrderTypeComboBox.SelectedItem.ToString()
+
+        ' Show/Hide fields based on type
         TableNumberTextBox.Enabled = (type = "Dine-in")
         AddressTextBox.Enabled = (type = "Delivery")
+
+        ' Clear fields if they become disabled
         If Not TableNumberTextBox.Enabled Then TableNumberTextBox.Clear()
         If Not AddressTextBox.Enabled Then AddressTextBox.Clear()
     End Sub
 
     Private Sub PlaceOrderButton_Click(sender As Object, e As EventArgs) Handles PlaceOrderButton.Click
         Try
-            If _cart.Count = 0 Then Throw New ArgumentException("Cart is empty.")
-            If Session.CurrentUser Is Nothing Then Throw New InvalidOperationException("Session expired. Please login again.")
+            ' 1. Check if Cart is empty
+            If _cart Is Nothing OrElse _cart.Count = 0 Then
+                MessageBox.Show("Cart is empty.", "Order Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
 
-            Dim orderType = OrderTypeComboBox.SelectedItem.ToString().ToLower()
+            ' 2. Check if User is logged in
+            If Session.CurrentUser Is Nothing Then
+                MessageBox.Show("Session expired. Please login again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Me.Close()
+                Return
+            End If
+
+            ' 3. ✅ FIX: Check if Order Type is selected
+            If OrderTypeComboBox.SelectedItem Is Nothing Then
+                MessageBox.Show("Please select an Order Type (Dine-in, Takeout, Delivery).", "Order Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+
+            Dim orderType As String = OrderTypeComboBox.SelectedItem.ToString().ToLower()
+
+            ' Create Order object
             Dim order As New Order With {
                 .CashierId = Session.CurrentUser.Id,
-                .orderType = orderType,
+                .OrderType = orderType,
                 .TableNumber = If(orderType = "dine-in", TableNumberTextBox.Text.Trim(), ""),
                 .CustomerName = CustomerNameTextBox.Text.Trim(),
                 .CustomerPhone = CustomerPhoneTextBox.Text.Trim(),
@@ -141,13 +198,14 @@ Partial Public Class OrderForm
 
             ' Reset Form
             _cart.Clear()
-            RefreshTotal()
             CustomerNameTextBox.Clear()
             CustomerPhoneTextBox.Clear()
             TableNumberTextBox.Clear()
             AddressTextBox.Clear()
             NotesTextBox.Clear()
+            ' Reset ComboBox to default
             OrderTypeComboBox.SelectedIndex = 0
+
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Order Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try

@@ -38,6 +38,7 @@ Partial Class OrderManagementForm
         '
         'StatusFilterComboBox
         '
+        Me.StatusFilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.StatusFilterComboBox.FormattingEnabled = True
         Me.StatusFilterComboBox.Items.AddRange(New Object() {"All", "Pending", "Preparing", "Ready", "Completed", "Cancelled"})
         Me.StatusFilterComboBox.Location = New System.Drawing.Point(118, 51)
@@ -83,7 +84,9 @@ Partial Class OrderManagementForm
         '
         'OrderStatusComboBox
         '
+        Me.OrderStatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.OrderStatusComboBox.FormattingEnabled = True
+        Me.OrderStatusComboBox.Items.AddRange(New Object() {"All", "Pending", "Preparing", "Ready", "Completed", "Cancelled"})
         Me.OrderStatusComboBox.Location = New System.Drawing.Point(101, 38)
         Me.OrderStatusComboBox.Name = "OrderStatusComboBox"
         Me.OrderStatusComboBox.Size = New System.Drawing.Size(210, 24)

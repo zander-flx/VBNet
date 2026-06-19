@@ -7,9 +7,7 @@ Partial Public Class AdminDashboardForm
     End Sub
 
     Private Sub MenuButton_Click(sender As Object, e As EventArgs) Handles MenuButton.Click
-        Using form As New MenuManagementForm()
-            form.ShowDialog(Me)
-        End Using
+        Using form As New MenuManagementForm() : form.ShowDialog(Me) : End Using
     End Sub
 
     Private Sub CategoriesButton_Click(sender As Object, e As EventArgs) Handles CategoriesButton.Click

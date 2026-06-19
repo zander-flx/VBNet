@@ -203,10 +203,9 @@ Partial Class OrderForm
         '
         'TableNumberTextBox
         '
-        Me.TableNumberTextBox.Enabled = False
         Me.TableNumberTextBox.Location = New System.Drawing.Point(370, 173)
         Me.TableNumberTextBox.Name = "TableNumberTextBox"
-        Me.TableNumberTextBox.Size = New System.Drawing.Size(297, 20)
+        Me.TableNumberTextBox.Size = New System.Drawing.Size(287, 20)
         Me.TableNumberTextBox.TabIndex = 31
         '
         'Label1

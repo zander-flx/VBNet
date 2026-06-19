@@ -8,8 +8,12 @@ Partial Public Class MenuManagementForm
 
     Public Sub New()
         InitializeComponent()
-        LoadCategories()
-        LoadMenuItems()
+        Try
+            LoadCategories()
+            LoadMenuItems()
+        Catch ex As Exception
+            MessageBox.Show("Form Init Error: " & ex.Message)
+        End Try
     End Sub
 
     Private Sub LoadCategories()
@@ -26,21 +30,21 @@ Partial Public Class MenuManagementForm
     End Sub
 
     Private Sub LoadMenuItems()
-        ' 1. Safely extract the selected category ID
+        ' 1. Safely extract category ID (handles Nothing, DBNull, and init state)
         Dim catId As Integer = 0
-        Dim selectedVal = CategoryFilterComboBox.SelectedValue
+        Dim selVal = CategoryFilterComboBox.SelectedValue
 
-        If selectedVal IsNot Nothing AndAlso TypeOf selectedVal Is Integer Then
-            catId = CInt(selectedVal)
+        If selVal IsNot Nothing AndAlso Not Convert.IsDBNull(selVal) AndAlso TypeOf selVal Is Integer Then
+            catId = CInt(selVal)
         End If
 
-        ' 2. Fetch items based on category
-        Dim items As List(Of MenuItem)
-        If catId = 0 Then
-            items = _itemService.GetAll()
-        Else
-            items = _itemService.GetByCategory(catId)
-        End If
+        ' 2. Fetch items (wrapped to prevent load-time crashes)
+        Dim items As List(Of MenuItem) = Nothing
+        Try
+            items = If(catId = 0, _itemService.GetAll(), _itemService.GetByCategory(catId))
+        Catch ex As Exception
+            ' Silently ignore DB errors during form initialization
+        End Try
 
         ' 3. Guarantee list is never Nothing
         If items Is Nothing Then items = New List(Of MenuItem)()
@@ -59,10 +63,14 @@ Partial Public Class MenuManagementForm
     Private Sub ClearForm()
         NameTextBox.Text = String.Empty
         DescriptionTextBox.Text = String.Empty
-        CategoryComboBox.SelectedValue = Nothing
         PriceInput.Value = 0
         AvailableCheckBox.Checked = True
         _selectedId = 0
+
+        ' Use SelectedIndex instead of SelectedValue to avoid binding exceptions
+        If CategoryComboBox.Items.Count > 0 Then
+            CategoryComboBox.SelectedIndex = -1
+        End If
     End Sub
 
     Private Sub SearchTextBox_TextChanged(sender As Object, e As EventArgs) Handles SearchTextBox.TextChanged
