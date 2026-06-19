@@ -28,10 +28,10 @@ Partial Class CategoryManagementForm
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.DeactivateButton = New System.Windows.Forms.Button()
         Me.NewButton = New System.Windows.Forms.Button()
-        Me.DescriptionTextBox = New System.Windows.Forms.Label()
+        Me.DescriptionLabel = New System.Windows.Forms.Label()
         Me.FullNameLabel = New System.Windows.Forms.Label()
         Me.ActiveCheckBox = New System.Windows.Forms.CheckBox()
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         CType(Me.CategoriesGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UserDetailsGroupBox.SuspendLayout()
@@ -60,10 +60,10 @@ Partial Class CategoryManagementForm
         Me.UserDetailsGroupBox.Controls.Add(Me.SaveButton)
         Me.UserDetailsGroupBox.Controls.Add(Me.DeactivateButton)
         Me.UserDetailsGroupBox.Controls.Add(Me.NewButton)
-        Me.UserDetailsGroupBox.Controls.Add(Me.DescriptionTextBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.DescriptionLabel)
         Me.UserDetailsGroupBox.Controls.Add(Me.FullNameLabel)
         Me.UserDetailsGroupBox.Controls.Add(Me.ActiveCheckBox)
-        Me.UserDetailsGroupBox.Controls.Add(Me.UsernameTextBox)
+        Me.UserDetailsGroupBox.Controls.Add(Me.DescriptionTextBox)
         Me.UserDetailsGroupBox.Controls.Add(Me.NameTextBox)
         Me.UserDetailsGroupBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UserDetailsGroupBox.Location = New System.Drawing.Point(338, 39)
@@ -103,14 +103,14 @@ Partial Class CategoryManagementForm
         Me.NewButton.Text = "New"
         Me.NewButton.UseVisualStyleBackColor = True
         '
-        'DescriptionTextBox
+        'DescriptionLabel
         '
-        Me.DescriptionTextBox.AutoSize = True
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(6, 96)
-        Me.DescriptionTextBox.Name = "DescriptionTextBox"
-        Me.DescriptionTextBox.Size = New System.Drawing.Size(79, 17)
-        Me.DescriptionTextBox.TabIndex = 6
-        Me.DescriptionTextBox.Text = "Description"
+        Me.DescriptionLabel.AutoSize = True
+        Me.DescriptionLabel.Location = New System.Drawing.Point(6, 96)
+        Me.DescriptionLabel.Name = "DescriptionLabel"
+        Me.DescriptionLabel.Size = New System.Drawing.Size(79, 17)
+        Me.DescriptionLabel.TabIndex = 6
+        Me.DescriptionLabel.Text = "Description"
         '
         'FullNameLabel
         '
@@ -133,12 +133,12 @@ Partial Class CategoryManagementForm
         Me.ActiveCheckBox.Text = "Active"
         Me.ActiveCheckBox.UseVisualStyleBackColor = True
         '
-        'UsernameTextBox
+        'DescriptionTextBox
         '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(87, 90)
-        Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(224, 23)
-        Me.UsernameTextBox.TabIndex = 1
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(87, 90)
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(224, 23)
+        Me.DescriptionTextBox.TabIndex = 1
         '
         'NameTextBox
         '
@@ -171,9 +171,9 @@ Partial Class CategoryManagementForm
     Friend WithEvents SaveButton As Button
     Friend WithEvents DeactivateButton As Button
     Friend WithEvents NewButton As Button
-    Friend WithEvents DescriptionTextBox As Label
+    Friend WithEvents DescriptionLabel As Label
     Friend WithEvents FullNameLabel As Label
     Friend WithEvents ActiveCheckBox As CheckBox
-    Friend WithEvents UsernameTextBox As TextBox
+    Friend WithEvents DescriptionTextBox As TextBox
     Friend WithEvents NameTextBox As TextBox
 End Class

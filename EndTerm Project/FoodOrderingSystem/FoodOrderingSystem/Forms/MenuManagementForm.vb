@@ -29,37 +29,6 @@ Partial Public Class MenuManagementForm
         CategoryComboBox.ValueMember = "Id"
     End Sub
 
-    Private Sub LoadMenuItems()
-        ' 1. Safely extract category ID (handles Nothing, DBNull, and init state)
-        Dim catId As Integer = 0
-        Dim selVal = CategoryFilterComboBox.SelectedValue
-
-        If selVal IsNot Nothing AndAlso Not Convert.IsDBNull(selVal) AndAlso TypeOf selVal Is Integer Then
-            catId = CInt(selVal)
-        End If
-
-        ' 2. Fetch items (wrapped to prevent load-time crashes)
-        Dim items As List(Of MenuItem) = Nothing
-        Try
-            items = If(catId = 0, _itemService.GetAll(), _itemService.GetByCategory(catId))
-        Catch ex As Exception
-            ' Silently ignore DB errors during form initialization
-        End Try
-
-        ' 3. Guarantee list is never Nothing
-        If items Is Nothing Then items = New List(Of MenuItem)()
-
-        ' 4. Apply search filter if user typed something
-        If Not String.IsNullOrWhiteSpace(SearchTextBox.Text) Then
-            items = items.Where(Function(i) i.Name.ToLower().Contains(SearchTextBox.Text.ToLower())).ToList()
-        End If
-
-        ' 5. Bind to grid
-        MenuGrid.DataSource = items
-        MenuGrid.ClearSelection()
-        ClearForm()
-    End Sub
-
     Private Sub ClearForm()
         NameTextBox.Text = String.Empty
         DescriptionTextBox.Text = String.Empty
@@ -78,7 +47,44 @@ Partial Public Class MenuManagementForm
     End Sub
 
     Private Sub CategoryFilterComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CategoryFilterComboBox.SelectedIndexChanged
-        LoadMenuItems()
+        If CategoryFilterComboBox.SelectedIndex < 0 Then Return
+        Try
+            LoadMenuItems()
+        Catch ex As Exception
+            MessageBox.Show("Filter Error: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub LoadMenuItems()
+        ' 1. Safely extract category ID (handles Nothing, DBNull, and binding quirks)
+        Dim catId As Integer = 0
+        Dim selVal = CategoryFilterComboBox.SelectedValue
+
+        If selVal IsNot Nothing AndAlso TypeOf selVal Is Integer Then
+            catId = CInt(selVal)
+        End If
+
+        ' 2. Fetch items safely
+        Dim items As List(Of MenuItem) = Nothing
+        Try
+            items = If(catId = 0, _itemService.GetAll(), _itemService.GetByCategory(catId))
+        Catch ex As Exception
+            ' Prevents form from closing on temporary DB/binding glitches
+            items = New List(Of MenuItem)()
+        End Try
+
+        ' 3. Guarantee list is never Nothing
+        If items Is Nothing Then items = New List(Of MenuItem)()
+
+        ' 4. Apply search filter if user typed something
+        If Not String.IsNullOrWhiteSpace(SearchTextBox.Text) Then
+            items = items.Where(Function(i) i.Name.ToLower().Contains(SearchTextBox.Text.ToLower())).ToList()
+        End If
+
+        ' 5. Bind to grid
+        MenuGrid.DataSource = items
+        MenuGrid.ClearSelection()
+        ClearForm()
     End Sub
 
     Private Sub MenuGrid_SelectionChanged(sender As Object, e As EventArgs) Handles MenuGrid.SelectionChanged

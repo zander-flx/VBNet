@@ -62,6 +62,7 @@ Partial Class MenuManagementForm
         'CategoryFilterComboBox
         '
         Me.CategoryFilterComboBox.FormattingEnabled = True
+        Me.CategoryFilterComboBox.Items.AddRange(New Object() {"All Categories", "Appetizers", "Beverages", "Desserts", "Main Dishes"})
         Me.CategoryFilterComboBox.Location = New System.Drawing.Point(153, 12)
         Me.CategoryFilterComboBox.Name = "CategoryFilterComboBox"
         Me.CategoryFilterComboBox.Size = New System.Drawing.Size(107, 21)
@@ -112,6 +113,7 @@ Partial Class MenuManagementForm
         'CategoryComboBox
         '
         Me.CategoryComboBox.FormattingEnabled = True
+        Me.CategoryComboBox.Items.AddRange(New Object() {"All Categories"})
         Me.CategoryComboBox.Location = New System.Drawing.Point(87, 139)
         Me.CategoryComboBox.Name = "CategoryComboBox"
         Me.CategoryComboBox.Size = New System.Drawing.Size(224, 24)
@@ -175,6 +177,7 @@ Partial Class MenuManagementForm
         '
         Me.PriceInput.DecimalPlaces = 2
         Me.PriceInput.Location = New System.Drawing.Point(87, 197)
+        Me.PriceInput.Maximum = New Decimal(New Integer() {1000, 0, 0, 0})
         Me.PriceInput.Name = "PriceInput"
         Me.PriceInput.Size = New System.Drawing.Size(224, 23)
         Me.PriceInput.TabIndex = 2

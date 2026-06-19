@@ -122,7 +122,7 @@ Partial Class OrderForm
         '
         Me.TotalLabel.AutoSize = True
         Me.TotalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TotalLabel.Location = New System.Drawing.Point(296, 383)
+        Me.TotalLabel.Location = New System.Drawing.Point(262, 383)
         Me.TotalLabel.Name = "TotalLabel"
         Me.TotalLabel.Size = New System.Drawing.Size(124, 26)
         Me.TotalLabel.TabIndex = 21
