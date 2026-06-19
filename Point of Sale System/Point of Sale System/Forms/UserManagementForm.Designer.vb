@@ -76,6 +76,7 @@ Partial Class UserManagementForm
         'RoleComboBox
         '
         Me.RoleComboBox.FormattingEnabled = True
+        Me.RoleComboBox.Items.AddRange(New Object() {"admin", "cashier"})
         Me.RoleComboBox.Location = New System.Drawing.Point(87, 202)
         Me.RoleComboBox.Name = "RoleComboBox"
         Me.RoleComboBox.Size = New System.Drawing.Size(224, 24)
